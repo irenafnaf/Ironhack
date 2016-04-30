@@ -1,46 +1,49 @@
 # Map
 
-# # upper_cased = ["miami", "madrid", "barcelona"].map do | city |
-# # 	city.capitalize
-# # end
+	# upper_cased = ["miami", "madrid", "barcelona"].map do | city |
+	# 	city.capitalize
+ 	# end
 
-# # puts upper_cased
+	# puts upper_cased
 
-# cities = ["miami", "barcelona", "madrid"]
+# Map Ex	
 
-# # pretty_cities =  cities.map do | city |
-# # 	city.capitalize
-# # end
+	# cities = ["miami", "barcelona", "madrid"]
 
-# # p pretty_cities
+	# pretty_cities =  cities.map do | city |
+	# 	city.capitalize
+	# end
 
-# pretty_cities = cities.map {|city| city.capitalize}
-# end
+	# p pretty_cities
 
-# p pretty_cities
+	# pretty_cities = cities.map {|city| city.capitalize}
+	# end
+
+	# p pretty_cities
 
 
 
 # Reduce
 
-# total = [1, 2, 3].reduce do | sum, num |
-# 	sum + num
-# end
+	# total = [1, 2, 3].reduce do | sum, num |
+	# 	sum + num
+	# end
 
-# puts total
+	# puts total
 
 # reduce example
 
-cities = ["miami", "madrid", "barcelona"]
+	#cities = ["miami", "madrid", "barcelona"]
 
-# total = cities.reduce(0) do | sum, city |
-# 	sum + city.length
-# end
+	# total = cities.reduce(0) do | sum, city |
+	# 	sum + city.length
+	# end
 
-# puts total/cities.length
+	# puts total/cities.length
 
 #Each wth index
 
+cities = ["miami", "madrid", "barcelona"]
 cities.each_with_index do | city, index |
 	puts "#{index +1}: #{city}"
 end
