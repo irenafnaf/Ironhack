@@ -7,10 +7,15 @@ class ShoppingCart
 		@items.push(item)
 	end
 
+	# def checkout
+	# 	total = 0
+	# 	@items.each do | single_item |
+	# 		total += single_item.price
+	# 	end
+
 	def checkout
-		total = 0
-		@items.each do | single_item |
-			total += single_item.price
+		total = @items.reduce(0) do | total, single_item |
+			total + single_item.price
 		end
 
 		total
