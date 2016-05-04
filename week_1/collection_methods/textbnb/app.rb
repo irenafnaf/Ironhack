@@ -14,61 +14,63 @@ homes = [
   Home.new("Nico's Apartment", "Washington", 4, 150)
 ]
 
-homes.each do |hm|
-  puts hm.name
-end
+
+# homes.each do |hm|
+#   puts hm.name
+# end
 
 
-sorted = homes.sort do |home1, home2|
-  home1.price <=> home2.price
-end
+# sorted = homes.sort do |home1, home2|
+#   home1.price <=> home2.price
+# end
 
-puts "SORTED FROM LOWEST TO HIGHEST PRICE:"
+# puts "SORTED FROM LOWEST TO HIGHEST PRICE:"
 
-sorted.each do |hm|
-  puts "#{hm.name} - $#{hm.price}"
-end
+# sorted.each do |hm|
+#   puts "#{hm.name} - $#{hm.price}"
+# end
 
-sorted = homes.sort do |home1, home2|
-  home2.price <=> home1.price
-end
+# sorted = homes.sort do |home1, home2|
+#   home2.price <=> home1.price
+# end
 
-puts "SORTED FROM HIGHEST TO LOWEST PRICE:"
+# puts "SORTED FROM HIGHEST TO LOWEST PRICE:"
 
-sorted.each do |hm|
-  puts "#{hm.name} - $#{hm.price}"
-end
+# sorted.each do |hm|
+#   puts "#{hm.name} - $#{hm.price}"
+# end
 
-sorted = homes.sort do |home1, home2|
-  home1.capacity <=> home2.capacity
-end
+# sorted = homes.sort do |home1, home2|
+#   home1.capacity <=> home2.capacity
+# end
 
-puts "SORTED BY CAPACITY:"
+# puts "SORTED BY CAPACITY:"
 
-sorted.each do |hm|
-  puts "#{hm.name} - #{hm.capacity}"
-end
+# sorted.each do |hm|
+#   puts "#{hm.name} - #{hm.capacity}"
+# end
 
-cartagena_homes = homes.select do |hm|
-  hm.city == "Cartagena"
-end
+# cartagena_homes = homes.select do |hm|
+#   hm.city == "Cartagena"
+# end
 
-puts "HOMES IN CARTAGENA:"
+# puts "HOMES IN CARTAGENA:"
 
-cartagena_homes.each do |hm|
-  puts "#{hm.name}"
-end
+# cartagena_homes.each do |hm|
+#   puts "#{hm.name}"
+# end
 
-avg_price = homes.reduce(0) do | sum, hm|
-  sum + hm.price
-end
+# avg_price = homes.reduce(0) do | sum, hm|
+#   sum + hm.price
+# end
 
-puts "The average price is:"
-puts avg_price / homes.length
+# puts "The average price is:"
+# puts avg_price / homes.length
 
-home_200_dollars = homes.find do |hm|
-  hm.price == 200
-end
+# home_200_dollars = homes.find do |hm|
+#   hm.price == 200
+# end
 
-puts "The home that costs $200 is:"
-puts home_200_dollars.name
+# puts "The home that costs $200 is:"
+# puts home_200_dollars.name
+
