@@ -25,8 +25,12 @@ class Game
 
 		if @board.winner? 
 			puts "You won!"
+		elsif @counter >= 8
+			puts "Nobody Won...Waaa Waaa Waaaaaa"
+				
 		else
 			@counter += 1
+			puts @counter
 			# puts "It's #{current_player}'s turn, enter where you want your mark."
 			# # user_input = gets.chomp
 			# # @board.add_character(user_input.split(","), current_player)
@@ -34,8 +38,8 @@ class Game
 			take_turns
 		end
 
-		if @board.winner? == false
-					puts "Game Over"
-		end
+		# if @board.winner? == false
+		# 			puts "Game Over"
+		# end
 	end
 end
