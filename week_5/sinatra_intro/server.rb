@@ -5,9 +5,15 @@ get "/" do
 end
 
 get "/hi" do
-	"Hi, this is another route in my application"
+	@greeting = "Hi, this is another route in my application"
+	erb :hi
 end
 
 get "/about" do
 	erb :about
+end
+
+get "/time" do	
+	@time = Time.now
+	erb :timenow
 end
