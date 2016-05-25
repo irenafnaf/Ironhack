@@ -1,3 +1,17 @@
 	<h1>By Irene Fernandez</h1>
 	<p> Hi, my name is Irene, i'm 29 and i'm from Colombia</p>
 	
+	<p>
+	 	The date today is: <%= Date.today %>
+	</p>
+
+	<% if Date.today.monday?%>
+		<h2> Mondays are the worst</h2>
+	<%end%>
+	<% if Date.today.tuesday? %>
+		<h2> It's Tuesday!</h2>
+		<p>
+			I love tuesdays because i have class!
+		</p>
+	<%end%>
+	
