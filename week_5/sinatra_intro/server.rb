@@ -17,3 +17,8 @@ get "/time" do
 	@time = Time.now
 	erb :timenow
 end
+
+get "/pizza" do
+	@ingredients = ["pepperoni", "sausage", "peppers", "mushrooms"]
+	erb :pizza
+end
