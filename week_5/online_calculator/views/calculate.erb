@@ -1,0 +1,16 @@
+<hmtl>
+<head>
+<title> Online Calculator - Results </title>
+</head>
+<body>
+	<h1>The result of your calculation is:</h1>
+	<%= @message %>
+		<form action="/calculate_using_result" method="POST">
+			<input type = "hidden"  name="result" value=<%=@result%>>
+				<button type="submit">Save Result</button>
+		</form>
+
+
+
+</body>
+</hmtl>
