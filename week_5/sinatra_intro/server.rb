@@ -1,4 +1,8 @@
 require "sinatra"
+require "sinatra/reloader" if development?
+require "pry"
+
+enable(:sessions)
 
 get "/" do 
 	"Hello Sinatra"
@@ -19,7 +23,7 @@ get "/time" do
 end
 
 get "/pizza" do
-	@ingredients = ["pepperoni", "sausage", "peppers", "mushrooms"]
+	@ingredients = ["pepperoni", "sausage", "peppers", "mushrooms", "cheese", "beef"]
 	erb :pizza
 end
 
@@ -28,8 +32,20 @@ get "/users/:username" do
 	erb :profile
 end
 
+get "/session_test/:text" do
+	text = params[:text]
+	session[:saved_value] = text
+end
+
+get "/session_show" do
+	@my_text = session[:saved_value]
+	erb :session_show
+end
+
 get "/hours/ago/:hours_ago" do
 	@hours_ago = params[:hours_ago]
 	@time = Time.now - (@hours_ago.to_i * 3600)
 	erb :hours_ago
 end
+
+
