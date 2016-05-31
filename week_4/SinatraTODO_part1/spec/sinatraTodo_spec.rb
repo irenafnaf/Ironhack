@@ -1,4 +1,4 @@
-require_relative ("../lib/sinatraTodo")
+require_relative ("../lib/task")
 require_relative "./spec_helper"
 
 describe "#Task" do 
