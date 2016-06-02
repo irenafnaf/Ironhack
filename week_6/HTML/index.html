@@ -1,0 +1,55 @@
+<!DOCTYPE html> <!-- # always have -->
+<html lang="en"> <!-- # always have -->
+
+	<head> <!-- # title, charset, viewport, styles...sorrounding your content, related to your content -->
+		<title> HTML Intro </title>
+		<link rel="stylesheet" href="theme.css">
+	</head>
+
+	<body> <!-- # content, what you're supposed to see on the screen -->
+		<h1> My first page </h1> <!-- #<h1> to <h2> heading tags, h1 is usually the title of the page -->
+		<section>
+			<h1> Section first heading</h1>
+				<p> One paragraph that can contain 
+				a lot of <em>text</em> if I want to! <!-- # <em> emphasis usually italizes -->
+				<a href="www.irenefernandezdesigns.com"> Irene Fernandez</a> <!-- # anchor tag --> <br><br>
+
+				<strong>Here's my awesome picture</strong> <br> <br> <!--# <strong> REALLY emphasizes usually bolds -->
+				<img src="http://www.marriott.com/Images/MiniStores/Header_Images/Enhanced%20Filters/Beach_hotels_landscape.jpg">
+				</p> <!-- # p tags browser will automatically give it some space before and after -->
+
+				<p> 
+					<ol> <!-- # lists that are in order, prints numbers but can be removed with CSS -->
+						<li>First Item</li>
+						<li>Second Item</li>
+					</ol>
+
+					<ul> <!-- #lists with no particular order, prints with bullets, can be removed with CSS -->
+						<li>One item</li>
+						<li>Another item</li>
+					</ul>
+				</p> <br> <br>
+				
+				<table> <!-- # only use to represent tabular data, not to create layouts! -->
+					<tr>
+						<th>Month</th>
+						<th>Savings</th>
+					</tr>
+					<tr>
+						<td>January</td>
+						<td>$100</td>
+					</tr>
+				</table>
+
+				<p> My awesome paragraph with <span class="highlighted"> something inside</span> that I want to
+				style differently!</p>
+
+				<form>
+					<label for="my_field">My field</label>
+					<input type="text" name="my_filed">
+					<input type="submit" value="Save">
+				</form> <!-- # forms support many kinds of diff input types: text, button, checkbox, date, email, file, hidden, password, radio, search, submit... -->
+		</section>
+	</body>
+
+</html>
