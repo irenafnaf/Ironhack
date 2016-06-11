@@ -1,0 +1,60 @@
+code {
+	background-color: #2db34a;
+	color: #fff;
+	border-radius: 6px;
+	display: block;
+	padding: 24px 15px;
+	text-align: center;
+
+
+}
+
+header,
+section,
+aside,
+footer {
+	margin: 0 1.5% 24px 1.5%;
+}
+
+aside code {
+/*	position: relative; uses original position as reference point
+*/	
+/*	position: absolute; uses screen as reference point & removes from flow of document
+*/	
+	position: fixed;
+	top: 50px;
+	left: 200px;
+	background-color: blue;
+}
+
+.image-wrapper {
+	overflow: auto;
+}
+
+img {
+	float: right;
+}
+
+.box-set{
+	background-color: #eaeaed;
+	/*overflow: auto;*/
+}
+
+.box-set:before,
+.box-set:after{
+	content: "";
+	display: table;
+}
+
+.box-set:after {
+	clear: both;
+}
+
+
+.box{
+	background-color: #2db34a;
+	text-align: center;
+	float: left;
+	margin: 1.5%;
+	width: 30%;
+}

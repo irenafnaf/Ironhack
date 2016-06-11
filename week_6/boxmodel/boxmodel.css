@@ -1,0 +1,14 @@
+.box {
+	height: 150px;
+	background: #654678;
+	padding: 25px;
+	margin:30px;
+	box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.4)
+}
+
+.content {
+	height: 150px;
+	background: #fff;
+/*	padding-bottom: 50px; */
+	
+}
