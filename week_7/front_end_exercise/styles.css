@@ -1,0 +1,94 @@
+
+/*body {
+    background-color: #E8E8EE;
+}
+*/
+
+.outside{
+	background-color: #E8E8EE;
+	height:500px;
+	margin-top: 50px;
+	padding-top: 50px;
+    padding-left: 50px;
+
+}
+
+.whale {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+p {
+padding: 10px 0 10px 10px;
+margin-left: -40px;
+}
+
+.blue-bold{
+	color: #2889D8;
+	vertical-align: middle;
+}
+
+.inside{
+	background-color: #fff;
+	height:69px;
+	width: 97%;
+	margin-top: 15px;
+	margin-left: 0px;
+	padding-top: 15px;
+    padding-left: 3px;
+    border-bottom: 1px #E8E8EE;
+    
+}
+
+
+.lifesaver {
+	width: 40px;
+	height: 40px;
+	border-radius: 5%;
+}
+
+.bottom{
+	background-color: #fff;
+	height:300px;
+	width: 97%;
+	margin-top: 1px;
+	margin-left: 0px;
+	padding-top: 15px;
+    padding-left: 3px;
+}
+
+.dollar_sign {
+	color: white;
+	background-color: #F3AB4C;
+	border-radius: 50%;
+	padding-left: 4px;
+	margin-left: 15px;
+}
+
+.dollars {
+	color: #F3AB4C;
+	margin-left: 5px;
+}
+
+.list {
+	list-style-type: none;
+	display: inline;
+}
+
+.list li {
+	display: inline;
+	border: 1px solid #2889D8;
+	border-radius: 8%;
+	padding: 4px 25px;
+}
+
+.comment {
+	color: #2889D8;
+	vertical-align: middle;
+	margin-left: -3px;
+	background-color: white;
+	border: 1px solid #2889D8;
+	border-radius: 8%;
+	padding: 4px 25px;
+}

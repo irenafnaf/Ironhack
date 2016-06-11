@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Movie Lovers Trivia Results</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+ <% if @movieSearch.length<=2%>
+		<p><%=@text%></p>
+ <% else %>
+
+	<h1>Which movie was realeased in <%=@correctyear %>?</h1>
+		<% @movieSearch.each do |movie| %>
+				<% if @correctyear == movie.year %>
+					<img src = "<%= movie.poster %>" width= "100px" onClick="alert('yay')">
+				<% else %>
+					<img src = "<%= movie.poster %>" width= "100px" onClick="alert('nay')">
+				<% end %>
+		<% end %>
+	
+<% end %>
+
+
+
+
+</body>
+</html>
