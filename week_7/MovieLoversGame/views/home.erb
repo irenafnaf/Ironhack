@@ -7,16 +7,34 @@
 		<link href="styles.css" rel="stylesheet">
 </head>
 <body>
-
-	<h1>Welcome to Movie Lovers Trivia!</h1>
-
-		<form action="/movie_picker" method="GET">
-			<input type="text" name="movie_term" placeholder="Enter a Movie Term"> 
+	
+	<div class="container-fluid up">
+			<div class="row nav_bar">
+				
+					<img class="image_profile" src="../me.jpg">
+					<a href= "home" class =" home_link contact_link"> Contact</a>
+					<a href= "home" class ="home_link"> About</a>
+ 					<a href= "home" class ="home_link"> Home</a> 
+				
+			</div>
 			
+	</div>
 
-			<button type="submit" name="search">Search</button>
-
-		</form>
+	<div class="big-info">
+		<div class="container text-xs-center">
+			<h1 class="header">Welcome to Movie Lovers Trivia!</h1>
+				<h2 class="header"> Search for a movie here</h2>
+					<div class="user_form">
+						<form action="/movie_picker" method="GET" >
+							
+								<input class="form" type="text" name="movie_term" placeholder="Enter a Movie Term"> 
+								<button class="btn btn-primary" type="submit" name="search">Search</button>
+							
+						</form>
+					</div>
+					
+		</div>
+	</div>
 
 		<%= @message %>
 	
