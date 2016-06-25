@@ -58,6 +58,8 @@ Rails.application.routes.draw do
   get '/contact' => 'site#contact'
 
   get '/projects' => 'projects#index'
+  get '/projects/new' => 'projects#new'
+  post '/projects' => 'projects#create'
 end
 
 
