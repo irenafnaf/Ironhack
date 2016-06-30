@@ -62,6 +62,8 @@ Rails.application.routes.draw do
   post '/projects' => 'projects#create'
 
   get '/projects/:id' => 'projects#show'
+
+  get '/projects/:project_id/time_entries' => 'time_entries#index'
 end
 
 
