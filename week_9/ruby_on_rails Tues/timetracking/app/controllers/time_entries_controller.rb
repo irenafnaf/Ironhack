@@ -2,6 +2,7 @@ class TimeEntriesController < ApplicationController
 	before_action :set_project, only: [:update, :edit, :create, :index, :new, :destroy]
 
 	def destroy
+		flash[:success] = "Time Entry Deleted!"
 		@time_entry = @project.time_entries.find(params[:id])
 		
 		@time_entry.destroy
@@ -38,7 +39,7 @@ class TimeEntriesController < ApplicationController
 		@time_entry = @project.time_entries.new(time_entry_params)
 		if @time_entry.save
 			# redirect_to action: 'index', controller: 'time_entries', project_id: @project.id 
-			redirect_to project_time_entries_path(@project)
+			redirect_to project_time_entries_path(@project), notice: "Time Entry Created Successfully"
 		else
 			render 'new'
 		end
