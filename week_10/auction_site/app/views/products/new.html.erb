@@ -1,3 +1,13 @@
+<% if @product.errors.any? %>
+	<ul>
+		<% @product.errors.full_messages.each do |error_msg| %>
+			<li> <%= error_msg %> </li>
+			<% end %>
+			</ul>
+			<% end %>
+
+
+
 <h1> Enter New Product </h1>
 
 <%= form_for [@user, @product] do |f| %>
@@ -10,6 +20,8 @@
 	<%= f.label :deadline %>
 	<%= f.date_field :deadline %>
 	<br>
-	<%= f.submit "Submit" %>
+	<%= f.submit "Add Product" %>
 
 <% end %>
+
+<%= link_to("View all products", user_products_path(@user)) %>
