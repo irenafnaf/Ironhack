@@ -4,25 +4,28 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animate.css">
+
   </head>
   <body>
-    <div class="container" style="margin-top: 50px;">
+    <div class="container 3" style="margin-top: 50px;">
       <div class="row">
         <div class ="col-sm-6">
             <p> Hi. </p>
-            <button class="btn btn-primary hello-button">Do Something</button> 
+            <button class="hello-button">Do Something</button> 
             <br>
             <br>
-            <button class="btn btn-primary js-pizza"> Pizza</button>
+            <button class="js-pizza"> Pizza</button>
             <br>
             <br>
-            <button class="btn btn-primary empanadas"> Empanadas</button>
+            <button class="empanadas"> Empanadas</button>
             <br>
             <br>
-            <button class="btn btn-primary" id="cookies"> Cookies</button>
+            <button id="cookies"> Cookies</button>
             <br>
             <br>
-            <button class="btn btn-primary" id="ice-cream"> Ice Cream</button>
+            <button id="ice-cream"> Ice Cream</button>
         </div>
         
         <div class="col-sm-6 lastname">
@@ -30,25 +33,33 @@
           <h1 id="title">jQuery Exercises</h1>
           <button class="js-tacos">Tacos</button>
           <button data-action="do stuff">Do Stuff</button>
+        <br>
+        <br>
+          <form id="js-form">
+             <input type="text" name="name" placeholder="Name"> 
+             <br>
+             <input type="text" name="lastname" placeholder="Last Name"> 
+             <br>
+             <input type="text" name="username" placeholder="User Name">
+             <br>
+             <input type="pasword" name="password" placeholder="Password">
+             <br>
+            <button id="js-submit" type="submit" value="Submit"> Submit </button>
+        </form> 
+
         </div>
       </div>
     </div>
 
-    <script type="text/javascript">
-      $('.hello-button').on('click', function () {
-        alert('hello world')
-      })
-      var price ='<p> Only $399.99</p>';
-      $('.container').append(price);
-
-      var name = "<p> I'm Irene. I'm Prepending.</p>";
-      $('.container').prepend(name);
-
-      var lastName = "<p> My Last Name is Fernandez. I'm using before function.</p>"; 
-      $('.lastname').before(lastName);
-
-      var after = "<p> I like tacos better. I'm using after function.</p>";
-      $('.pizza').after(after);
-    </script>
+        <div class="container two" style="margin-top: 50px;">
+          <div class="row">
+            <div class ="col-sm-6">
+               <button class="js-newbutton" id="keep">New Button</button>
+              <br>
+              <br>
+               <button class="js-coloring" id="color">Multicolor</button>
+            </div>
+          </div>
+        </div>
   </body>
 </html>
