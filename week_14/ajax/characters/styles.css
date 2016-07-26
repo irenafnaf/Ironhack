@@ -1,0 +1,15 @@
+
+
+input {
+	width: 100%;
+	height: 35px;
+	margin-top: 10px;
+}
+
+#js-submit {
+	margin-top: 15px;
+}
+
+strong {
+	color: #337ab7;
+}

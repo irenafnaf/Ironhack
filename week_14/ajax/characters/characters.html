@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Characters</title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	 <link rel="stylesheet" href="styles.css">
+     <!--jquery and javascript script tags can go in the head as long as javascript goes after jquery-->
+</head>
+<body>
+   <div class="container" style="margin-top: 50px;">
+
+					 <button class=" btn btn-primary" id="js-getcharacters"> Fetch Characters </button> 
+					 
+					 <ul id="js-character">
+					 </ul>
+					 <br>
+
+						
+						<h2> Enter New Character:</h2>
+
+					    <form id="js-form">
+				             <input id="js-name" type="text" class="js-required" name="name" placeholder="Enter Name"> 
+				             <br>
+				             <input id="js-occupation" type="text" class="js-required" name="occupation" placeholder="Occupation"> 
+				             <br>
+							 <input id="js-weapon" type="text" class="js-required" name="weapon" placeholder="Weapon">
+				             <br>
+				             <input id="js-debt" type="text" name="debt" placeholder="Debt">
+				             <br>
+				            <button id="js-submit" type="submit" value="Submit"> Submit </button>
+				        </form> 
+
+	  </div>
+   
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <script type="text/javascript" src="app.js"></script> 
+
+	
+</body>
+</html>
