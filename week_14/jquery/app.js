@@ -26,7 +26,7 @@
             event.preventDefault();
            var emptycounter = 0
             $("input").each(function(index, ele){
-                  if ele.val() === ""{
+                  if $(ele).val() === ""{
                         emptycounter++
                   }
 
