@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
 
-  get '/' => 'site#home', as: :home
+  get '/' => 'contacts#new', as: :home
 
 end
