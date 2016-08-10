@@ -1,0 +1,16 @@
+<ul>
+	<% @post.each do |post| %>
+			<li>
+			<h3>	<%= link_to("#{post.title}", post_path(post)) %>
+			</h3>
+				
+				<img src ="<%= post.gif_url %>">
+
+				<p>Total Votes: <%= post.nov %></p>
+
+			</li>
+	<%end%>
+
+	<%= link_to("Create NEW", posts_new_path) %>
+
+</ul>
