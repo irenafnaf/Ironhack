@@ -1,5 +1,10 @@
 class IngredientsController < ApplicationController
 
+	def index
+		ingredients = Ingredient.all
+		render json: ingredients
+	end
+
 	def create
 		ingredient = Ingredient.create(ingredient_params)
 		render json: ingredient
@@ -16,11 +21,22 @@ class IngredientsController < ApplicationController
 		end
 	end
 
-	def delete
+	def destroy
 		ingredient = Ingredient.find_by(id: params[:id])
 
-		if ingredient.delete
+		if ingredient.destroy
 			render json: ingredient
+		else
+			render json: {error: "Ingredient not found"},
+			status: 404
+		end
+	end
+
+	def update
+		ingredient = Ingredient.find_by(id: params[:id])
+
+		if ingredient.update
+			render json: ingredient_params
 		else
 			render json: {error: "Ingredient not found"},
 			status: 404

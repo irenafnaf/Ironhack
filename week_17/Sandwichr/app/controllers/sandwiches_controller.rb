@@ -1,4 +1,6 @@
 class SandwichesController < ApplicationController
+
+
 	def index
 		sandwiches = Sandwich.all
 		render json: sandwiches
@@ -12,9 +14,19 @@ class SandwichesController < ApplicationController
 
 	def show
 		sandwich = Sandwich.find_by(id: params[:id])
-		
+		ingredients = 
+			if sandwich.ingredients != 0
+				sandwich.ingredients.all
+			else
+				"None"
+			end
+		calories = sandwich.total_calories
+		sandwich_with_ingredients = {"sandwich" => sandwich,
+								"ingredients" => ingredients,
+								"calories" => calories}
 		if sandwich
-			render json: sandwich
+			render json: sandwich_with_ingredients
+			
 		else
 			render json: {error: "Sandwich not found"},
 				status: 404
