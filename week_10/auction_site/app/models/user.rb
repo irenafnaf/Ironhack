@@ -1,9 +1,11 @@
 class User < ActiveRecord::Base
-	has_many :products
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
 
-validates :name, presence: true, uniqueness: true
-validates :email, presence: true, uniqueness: true
-
-
-
+  has_many :products
+  has_many :bids
+  validates :email, uniqueness: true, presence: true
+  validates :name, presence: true
 end

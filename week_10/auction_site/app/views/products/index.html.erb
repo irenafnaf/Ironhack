@@ -1,6 +1,9 @@
-<%= @user.name %> Products:
+<h1><%= @user.name %> Products: </h1>
 <ul>
 <% @products.each do |product| %>
     <li><%= link_to(product.title, user_product_path(@user, product)) %> </li>
     <% end %>
     </ul>
+
+<%= link_to "Back to Profile Page", user_path(@user) %><br>
+<%= link_to "Create New Product", new_user_product_path %>

@@ -1,0 +1,8 @@
+<h1>The Worst GIFS Ever:</h1>
+<ul>
+<% @post.each do |post| %>
+	<li><%= link_to("#{post.title}", post_path(post.id)) %> </li>
+	<% end %>
+	</ul>
+
+<h2><%= link_to "CREATE NEW POST", posts_new_path %> </h2>

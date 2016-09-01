@@ -1,36 +1,51 @@
+<% if @bid.errors.any? %>
+	<ul>
+		<% @bid.errors.full_messages.each do |error_msg| %>
+			<li> <%= error_msg %> </li>
+		<%end%>
+
+	</ul>
+	<% end %>
+
 <h1>Thanks <%= @user.name %> for creating your new product: <%= @product.title %> </h1>  
-<br>
+
 <h2> Description: <%= @product.description %> </h2>
-<br>
+<h2> Minimum Bid: $<%= @product.minimum_bid %> </h2>
 <h2> Deadline: <%= @product.deadline %> </h2>
 
-<%= link_to("Create New Product", new_user_product_path(@user)) %>
+<%= link_to("Create New Product", new_user_product_path(@user)) %> <br>
+<%= link_to "Back to All Products", user_products_path(@user) %>
 
 <br>
 <br>
 
-<% if Time.now < @product.deadline %>
 
-<% @bids.each do |bid| %>
-	<li>
-		<%= bid.amount %> - <b> Bidder</b>
-		<%= bid.user.name %>
-	</li>
-<% end %>
+<% if Date.today < @product.deadline %>
 
-	<%= form_for [@product, @bid] do |f| %>
-		<%= f.label :amount %>
-		<%= f.number_field :amount %>
+		<% @bids.each do |bid| %>
+			<li>
+				$<%= bid.amount %> - <b> Bidder: </b>
+				<%= bid.user.name %>
+			</li>
+		<% end %> <br>
 
-		<br>
-		<%= f.label :email %>
-		<%= f.text_field :email %>
-		<br>
-		<br>
-		<%= f.submit "Place Bid" %>
+			<%= form_for [@product, @bid] do |f| %>
+				<%= f.label :amount %>
+				<%= f.number_field :amount %>
 
-<% end %>
+				<br>
+				<%= f.label :email %>
+				<%= f.text_field :email %>
+				<br>
+				<br>
+				<%= f.submit "Place Bid" %>
+
+			<% end %>
 
 <% else %>
-	<%= @high_bid.amount %> - <b> Winning Bidder: </b> <%= @high_bid.user.name %>
+		<% if @high_bid == nil %>
+				<h1> no bids, bidding is over!</h1>
+				<% else %>
+			<%= @high_bid.amount %> - <b> Winning Bidder: </b> <%= @high_bid.user.name %>
+		<%end%>
 <%end%>

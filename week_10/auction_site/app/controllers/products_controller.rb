@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
 
 
         #permit is whitelisting only those attributes to be assigned
-        product_params = params.require(:product).permit(:title, :description, :deadline)
+        product_params = params.require(:product).permit(:title, :minimum_bid, :description, :deadline)
 
         # without permit: @project.time_entries.new params[:time_entry]
 
@@ -27,11 +27,11 @@ class ProductsController < ApplicationController
  	end
 	
  	def show
-        @user = User.find params[:user_id]
-        @product = @user.products.find_by(id: params[:id])
+        @user = User.find(params[:user_id])
+        @product = Product.find_by(id: params[:id])
 
-        @bids = @product.bids.order(amount: :desc)
         @bid = Bid.new
+        @bids = @product.bids.order(amount: :desc)
         @high_bid = @bids.first
 
     end
